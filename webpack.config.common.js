@@ -11,6 +11,9 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  resolve: {
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "public/index.html"),
@@ -20,6 +23,10 @@ module.exports = {
         {
           from: path.resolve(__dirname, "public/favicon.png"),
           to: path.resolve(__dirname, "dist"),
+        },
+        {
+          from: path.resolve(__dirname, "public/assets"),
+          to: path.resolve(__dirname, "dist/assets"),
         },
       ],
     }),
