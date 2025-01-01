@@ -8,7 +8,7 @@ module.exports = {
   entry: "./index.js",
   output: {
     filename: "[name].[contenthash].js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
     clean: true,
   },
   resolve: {
@@ -22,11 +22,11 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, "public/favicon.png"),
-          to: path.resolve(__dirname, "dist"),
+          to: path.resolve(__dirname, "docs"),
         },
         {
           from: path.resolve(__dirname, "public/assets"),
-          to: path.resolve(__dirname, "dist/assets"),
+          to: path.resolve(__dirname, "docs/assets"),
         },
       ],
     }),
